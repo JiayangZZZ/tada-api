@@ -1,0 +1,161 @@
+FORMAT: 1A
+HOST: http://10.14.41.20:8081/api
+
+# Tada API
+
+API spec for Tada project. 
+
+## Labels [/labels]
+
+### Get several labels [GET] 
+WIP
++ Response 200 (application/json)
+
+        {
+        }
+
+## Label [/labels/{id}]
+
+### Get one label [GET]
+
+Get a label's data, related labels(sorted by confidence), and videos(grouped by hour) under this label.
+
++ Response 200 (application/json)
+
+        {
+            "name": "Darth Vador",
+            "id": "asdfasdfasdf",
+            "video_count": 123343,
+            "relations": [{
+                "id": "asdfasdfasdf",
+                "name": "Battlefront2",
+                "count": 455
+            },{
+                "id": "asdfasdfasdf",
+                "name": "Starwhat",
+                "count": 450
+            }],
+            "history": {
+                "grouped_by": "hour",
+                "videos": [[{
+                    "id": "asdfasdfasdfasfd",
+                    "href": "http://www.youtube.1",
+                    "title": "One Awesome Video",
+                    "views": 123123
+                },{
+                    "id": "asdfasdfasdfasfd",
+                    "href": "http://www.youtube.2",
+                    "title": "One Awesome Video",
+                    "views": 123123
+                },{
+                    "id": "asdfasdfasdfasfd",
+                    "href": "http://www.youtube.3",
+                    "title": "One Awesome Video",
+                    "views": 123123
+                }], [{
+                    "id": "asdfasdfasdfasfd",
+                    "href": "http://www.youtube.1",
+                    "title": "One Awesome Video",
+                    "views": 123123
+                },{
+                    "id": "asdfasdfasdfasfd",
+                    "href": "http://www.youtube.2",
+                    "title": "One Awesome Video",
+                    "views": 123123
+                },{
+                    "id": "asdfasdfasdfasfd",
+                    "href": "http://www.youtube.3",
+                    "title": "One Awesome Video",
+                    "views": 123123
+                }]]
+            }
+        }
+
+
+## Video [/video/{id}]
+
++ Parameters
+    + id - a unique database ID for the video
+    
+### Get one video [GET]
+
+Get a video's data and its labels(sorted by confidence).
+
++ Response 200 (application/json)
+
+        {
+            "id": "asdfasdfasdfasdf",
+            "title": "This is awesome",
+            "channel": "Twitter",
+            "href": "http://www.youtube.asemsoemeee",
+            "posted_at": "2015-11-26T19:13:31Z",
+            "views": 12345,
+            "labels": [{
+                "id": "asdfasdfasdf",
+                "name": "Battlefront2",
+                "count": 455
+            },{
+                "id": "asdfasdfasdf",
+                "name": "Starwhat",
+                "count": 450
+            }]
+        }
+
+## Search [/search/{?q}]
+
++ Parameters
+    + q (string) - query input from user
+    
+### Search for a label [POST]
+WIP
+    
++ Response 200 (application/json)
+
+        {
+            "name": "Darth Vador",
+            "id": "asdfasdfasdf",
+            "video_count": 123343,
+            "relations": [{
+                "id": "asdfasdfasdf",
+                "name": "Battlefront2",
+                "count": 455
+            },{
+                "id": "asdfasdfasdf",
+                "name": "Starwhat",
+                "count": 450
+            }],
+            "history": {
+                "grouped_by": "hour",
+                "videos": [[{
+                    "id": "asdfasdfasdfasfd",
+                    "href": "http://www.youtube.1",
+                    "title": "One Awesome Video",
+                    "views": 123123
+                },{
+                    "id": "asdfasdfasdfasfd",
+                    "href": "http://www.youtube.2",
+                    "title": "One Awesome Video",
+                    "views": 123123
+                },{
+                    "id": "asdfasdfasdfasfd",
+                    "href": "http://www.youtube.3",
+                    "title": "One Awesome Video",
+                    "views": 123123
+                }], [{
+                    "id": "asdfasdfasdfasfd",
+                    "href": "http://www.youtube.1",
+                    "title": "One Awesome Video",
+                    "views": 123123
+                },{
+                    "id": "asdfasdfasdfasfd",
+                    "href": "http://www.youtube.2",
+                    "title": "One Awesome Video",
+                    "views": 123123
+                },{
+                    "id": "asdfasdfasdfasfd",
+                    "href": "http://www.youtube.3",
+                    "title": "One Awesome Video",
+                    "views": 123123
+                }]]
+            }
+        }

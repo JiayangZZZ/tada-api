@@ -152,13 +152,13 @@ index 3 is x-axis=last mention date, y-axis=like ratio
                         [0, 1],
                         [3, 0]
                     ],
-                    "six-hours": [
+                    "six-hour": [
                         [1, 5],
                         [6, 8],
                         [0, 1],
                         [80, 1]
                     ],
-                    "twelve-hours": [
+                    "twelve-hour": [
                         [0, 1],
                         [3, 9],
                         [34, 5],
@@ -172,13 +172,13 @@ index 3 is x-axis=last mention date, y-axis=like ratio
                         [0, 1],
                         [3, 0]
                     ],
-                    "six-hours": [
+                    "six-hour": [
                         [1, 5],
                         [6, 8],
                         [0, 1],
                         [80, 1]
                     ],
-                    "twelve-hours": [
+                    "twelve-hour": [
                         [0, 1],
                         [3, 9],
                         [34, 5],
@@ -201,23 +201,68 @@ Get a video's data and its labels(sorted by confidence).
 + Response 200 (application/json)
 
         {
-            "id": "asdfasdfasdfasdf",
-            "title": "This is awesome",
-            "channel": "Twitter",
-            "href": "http://www.youtube.asemsoemeee",
-            "timestamp": "2015-11-26T19:13:31Z",
-            "views": 12345,
-            "labels": [{
-                "id": "asdfasdfasdf",
-                "name": "Battlefront2",
-                "is_meta": true,
-                "count": 455
-            },{
-                "id": "asdfasdfasdf"
-                "name": "Starwhat",
-                "is_meta": true,
-                "count": 450
-            }]
+            "id": "59fa7a66f1d4222ad4d38be2",
+            "href": "https://www.youtube.com/watch?v=tm32FFFbAOk",
+            "channel": "YouTube",
+            "stats": {
+                "view_count": 150212,
+                "like_count": 4087,
+                "dislike_count": 452,
+                "fav_count": 0,
+                "comment_count": 1410,
+                "vl_ratio": 0.027208212393151014,
+                "last_mention": {
+                    "timestamp": 1509593439,
+                    "source": "twitter",
+                    "source_id": "925928112797437952"
+                }
+            },
+            "title": "Lucasfilm President Kathleen Kennedy on All Things Star Wars, Kylo Ren in Battlefront II, and More!",
+            "timestamp": 1509565767,
+            "labels": [
+                {
+                    "_id": "59fa7a66f1d4222ad4d38bd8",
+                    "name": "kathleen kennedi",
+                    "is_meta": false,
+                    "score": 0.619994044303894,
+                    "count": 0
+                },
+                {
+                    "_id": "59fa7a66f1d4222ad4d38bd9",
+                    "name": "lucasfilm",
+                    "is_meta": false,
+                    "score": 0.20345813035964966,
+                    "count": 0
+                },
+                {
+                    "_id": "59fa7a66f1d4222ad4d38bda",
+                    "name": "all things star war",
+                    "is_meta": false,
+                    "score": 0.05823218822479248,
+                    "count": 0
+                },
+                {
+                    "_id": "59e568da31b15d2b9cf68722",
+                    "name": "kylo ren",
+                    "is_meta": false,
+                    "score": 0.053460799157619476,
+                    "count": 0
+                },
+                {
+                    "_id": "59e15967cd25d81dc417c29d",
+                    "name": "more",
+                    "is_meta": false,
+                    "score": 0.046916767954826355,
+                    "count": 0
+                },
+                {
+                    "_id": "59e92e77dc4aaf47c4e09870",
+                    "name": "swbf2",
+                    "is_meta": true,
+                    "score": 0.017938053235411644,
+                    "count": 0
+                }
+            ]
         }
 
 ## Search [/search/{?q}]

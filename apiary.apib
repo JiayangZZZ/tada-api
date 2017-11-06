@@ -106,7 +106,7 @@ Get a label's data, related labels(sorted by confidence), and videos(grouped by 
 Get video ids containing the intersection of these labels under the constraints of view count and like ratio.
 <br><br>
 E.g. To get six hour position of an id 59e92e77dc4aaf47c4e09870 with x-axis=last mention date and y-axis=like ratio, 
-use circlePositions['59e92e77dc4aaf47c4e09870'][sixhour][3]
+use circlePositions['59e92e77dc4aaf47c4e09870']['six-hour'][3]
 <br>
 index 0 is x-axis=post date, y-axis=view count
 <br>
@@ -116,9 +116,9 @@ index 2 is x-axis=last mention date, y-axis=view count
 <br>
 index 3 is x-axis=last mention date, y-axis=like ratio
 + Parameters
-    + id (array) - An array of label ids e.g.[id1, id2, id3, ...] (default: all ids)
-    + viewCountRange (array) - A range of view count values e.g.[0, 3566] (default: 0-MAX)
-    + likeRatioRange (array) - A range of like ratio in percentage e.g.[20, 80] (default: 0-100)
+    + id (optional,array) - An array of label ids e.g.[id1, id2, id3, ...] (default: all ids)
+    + viewCountRange (optional,array) - A range of view count values e.g.[0, 3566] (default: 0-MAX)
+    + likeRatioRange (optional,array) - A range of like ratio in percentage e.g.[20, 80] (default: 0-100)
     
 + Response 200 (application/json)
 

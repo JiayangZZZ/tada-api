@@ -4,37 +4,36 @@ HOST: http://10.14.41.20:8081/api
 # Tada API
 
 API spec for Tada project. 
-<!--
+
 ## Labels [/labels]
 
-### Get several labels [GET] 
-WIP
-+ Response 200 (application/json)
+### Get several labels [POST] 
 
+Get labels
+
++ Schema
+    {
+        "view_count_range": ["0", "Infinity"],
+        "like_ratio_range": ["0", "1"]
+    }
+
++ Request (application/json)
+
+    + Attributes
+        + view_count_range (required, array) - View count range [0, 9999]
+        + like_ratio_range (required, array) - Like ratio [0, 100]
+
++ Response 200 (application/json)
+        
         {
-            "description": {
-                "sorted_by": "popularity",
-                "label_count": 18283848
-            },
-            "data": [[
-                "name": "Darth vador",
-                "id": "asdfasdfasdfasdf",
-                "is_meta": true,
-                "video_count": 123412
-            ],[
-                "name": "Dar",
-                "id": "asdfasdfasdfasdf",
-                "is_meta": false,
-                "video_count": 123412
-            ],[
-                "name": "dor",
-                "id": "asdfasdfasdfasdf",
-                "is_meta": false,
-                "video_count": 123412
-            ]]
+            "total": 33232,
+            "labels": {
+                "59e1570ec7e0c22a00d7648e": "Darth Vader",
+                "59e92e81dc4aaf47c4e09871": "Luke"
+            }
         }
 
-
+<!--
 ## Label [/labels/{id}]
 
 ### Get one label [GET]
@@ -98,7 +97,8 @@ Get a label's data, related labels(sorted by confidence), and videos(grouped by 
                     "labels": ["label1", "label2", "label3", "label4"]
                 }]]
             }
--->
+
+
 ## Filter Labels [/filter-labels]
 ### Get labels under current viewcount range and like ratio range [POST]
 + Request (application/json)
@@ -106,9 +106,8 @@ Get a label's data, related labels(sorted by confidence), and videos(grouped by 
     + Attributes
         + view_count_range (required, array) - View count range [0, 9999]
         + like_ratio_range (required, array) - Like ratio [0, 100]
-        
-+ Response 200 (application/json)
 
+-->
 
 ## Filter Videos [/filter-videos]
 
@@ -472,7 +471,7 @@ Get video ids containing the intersection of these labels under the constraints 
                     [53,0],
                     [53,0],
                     [53,0],
-                    [5compress]
+                    [53,0]
                  ]
               },
               "59fd03016114c46bb476d3c5":{  

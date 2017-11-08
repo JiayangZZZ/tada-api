@@ -7,21 +7,7 @@ API spec for Tada project.
 
 ## Labels [/labels]
 
-### Get several labels [POST] 
-
-Get labels
-
-+ Schema
-    {
-        "view_count_range": ["0", "Infinity"],
-        "like_ratio_range": ["0", "1"]
-    }
-
-+ Request (application/json)
-
-    + Attributes
-        + view_count_range (required, array) - View count range [0, 9999]
-        + like_ratio_range (required, array) - Like ratio [0, 100]
+### Get several labels [GET]
 
 + Response 200 (application/json)
         

@@ -100,6 +100,14 @@ Get a label's data, related labels(sorted by confidence), and videos(grouped by 
 ### Get videos under multiple labels (intersection), with current viewcount range and like ratio range [POST]
 
 Get video ids containing the intersection of these labels under the constraints of view count and like ratio.
+<br><br>
+index 0 is x-axis=post date, y-axis=view count
+<br><br>
+index 1 is x-axis=post date, y-axis=like ratio
+<br><br>
+index 2 is x-axis=last mention date, y-axis=view count
+<br><br>
+index 3 is x-axis=last mention date, y-axis=like ratio
 
 + Schema
     {
@@ -114,7 +122,8 @@ Get video ids containing the intersection of these labels under the constraints 
         + ids (required, array) - Array of ids [1, 2, 3..]
         + view_count_range (required, array) - View count range [0, 9999]
         + like_ratio_range (required, array) - Like ratio [0, 100]
-    
+
+
 + Response 200 (application/json)
 
         {  
